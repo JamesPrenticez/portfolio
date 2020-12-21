@@ -6,17 +6,16 @@ export default class Sidebar extends React.Component {
 filterSelection = (c) => {
     var x, i;
     x = document.getElementsByClassName("row");
-console.log(x)
     if (c == "all") c = "";
     // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
     for (i = 0; i < x.length; i++) {
-    this.w3RemoveClass(x[i], "show");
-    if (x[i].className.indexOf(c) > -1) this.w3AddClass(x[i], "show");
+    this.removeClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) this.addClass(x[i], "show");
     }
 }
 
 // Show filtered elements
-w3AddClass = (element, name) => {
+addClass = (element, name) => {
     var i, arr1, arr2;
     arr1 = element.className.split(" ");
     arr2 = name.split(" ");
@@ -28,7 +27,7 @@ w3AddClass = (element, name) => {
   }
 
 // Hide elements that are not selected
-w3RemoveClass = (element, name) => {
+removeClass = (element, name) => {
 var i, arr1, arr2;
 arr1 = element.className.split(" ");
 arr2 = name.split(" ");
@@ -46,10 +45,10 @@ render(){
         <>
             <div className="sidebar">
 
+                <a href="#" onClick={() => this.filterSelection('all')}> Show all</a>
                 {nameArray.map(project => <a href="#" key={project} onClick={() => { this.filterSelection(`${project}`); }}>{project}</a>)}
 
-                {/* <button className="btn" onClick={() => this.filterSelection('all')}> Show all</button>
-                <button className="btn" onClick={() => this.filterSelection('alexandra')}> Alexandra</button> */}
+                {/*<button className="btn" onClick={() => this.filterSelection('alexandra')}> Alexandra</button> */}
 
             </div>
         </>
