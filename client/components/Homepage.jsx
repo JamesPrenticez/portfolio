@@ -1,17 +1,15 @@
 import React from 'react'
+import Header from './Header';
+import Footer from './Footer';
 
-function Homepage() {
-
-    const boiler = () => {
-
+export default class Homepage extends React.Component {
+    render(){
+        return (
+            <>
+                <Header/>
+                <h1>Homepage</h1>
+                <Footer/>
+            </>
+        )
     }
-
-    return (
-        <>
-            <h1>Homepage</h1>
-        </>
-    )
 }
-
-
-export default Homepage

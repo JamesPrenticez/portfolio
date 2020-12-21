@@ -56,7 +56,7 @@ footer{
 }
 /*---------- Nav ---------*/
 nav{
-  display: inline-flex;
+  text-align: right;
   position: sticky;
   top: 0;
   height: 50px;
@@ -64,27 +64,26 @@ nav{
   background-color: black;
   overflow: hidden;
   z-index: 1;
+  padding-right: 2%;
   }
 
 nav a {
-  float: left;
-  width: 15VW;
+  display: inline-flex;
   color: #f2f2f2;
-  text-align: center;
+  text-align: right;
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
 }
 
 nav a:hover{
-background-color: #EC2027;
-cursor: pointer;
+  color: #EC2027;
+  cursor: pointer;
 }
 
 nav a.active{
-  color: white;
+  color:  #EC2027;
   text-decoration: none;
-  background-color:  #EC2027;
 }
 
 /*---------- Main ----------*/
@@ -105,7 +104,7 @@ main{
   box-shadow: 5px 10px 8px 10px #888888;
 }
 
-/*---------- Portfolio ---------*/
+/*---------- Portfolio Content---------*/
 .column{
   height: 100%;
 }
@@ -123,7 +122,6 @@ main{
 
 }
 
-/* Content */
 .content {
   background-color: white;
   border-top: 3px solid #EC2027;
@@ -132,13 +130,13 @@ main{
 }
 
 .content img {
-    height: 90%;
-    width: 15%;
-    border: 2px solid grey;
-    border-radius: 3px;
-    object-fit: cover;
-    margin: 5px;
-    float: right;
+  height: 90%;
+  width: 15%;
+  border: 2px solid grey;
+  border-radius: 3px;
+  object-fit: cover;
+  margin: 5px;
+  float: right;
 }
 
 .text {
@@ -152,11 +150,11 @@ main{
 /*---------- Sidebar ---------*/
 /* The sidebar menu */
 .sidebar {
-  height: 100%; /* Full-height: remove this if you want "auto" height */
-  min-width: 15VW; /* Set the width of the sidebar */
+  height: 100VH; /* Full-height: remove this if you want "auto" height */
+  width: 15VW; /* Set the width of the sidebar */
   position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-  z-index: 1; /* Stay on top */
   top: 0; /* Stay at the top */
+  z-index: 1; /* Stay on top */
   left: 0;
   background-color: #EC2027; /* Red */
   overflow-x: hidden; /* Disable horizontal scroll */

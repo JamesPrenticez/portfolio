@@ -13,7 +13,7 @@ import Contact from './Contact'
 const App = () => {
   return (
     <>
-    <Header/>
+
     <Router>
         <nav>
           <NavLink to="/homepage">Homepage</NavLink>
@@ -28,7 +28,7 @@ const App = () => {
           <Route path="/contact" component={Contact}/>
       </main>
     </Router>
-    <Footer/>
+
     </>
   )
 }
