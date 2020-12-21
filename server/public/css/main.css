@@ -159,21 +159,42 @@ main{
   background-color: #EC2027; /* Red */
   overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 20px;
-  margin-top: 150px;
+  margin-top: 50px;
 }
 
-/* The navigation menu links */
+  /* Style the buttons */
 .sidebar a {
-  padding: 6px 8px 6px 16px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #818181;
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  cursor: pointer;
+  margin: 0 auto;
   display: block;
+  width: 100%;
+  color: white;
+  background-color: #EC2027;
+  font-size: 1em;
+  font-weight: bold;
+  text-align: left;
 }
-
-/* When you mouse over the navigation links, change their color */
-.sidebar a:hover {
-  color: #f1f1f1;
+  
+.sidebar a {
+  display: inline-flex;
+  color: #f2f2f2;
+  text-align: right;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+  
+.sidebar a:hover{
+  background-color: hsla(0, 0%, 45%, 0.247);
+  cursor: pointer;
+}
+  
+.sidebar a:active{
+  color:  blue;
+  text-decoration: none;
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
@@ -182,29 +203,4 @@ main{
   .sidenav a {font-size: 18px;}
 }
 
-  /* Style the buttons */
-  .btn {
-    border: none;
-    outline: none;
-    padding: 12px 16px;
-    cursor: pointer;
-    margin: 0 auto;
-    display: block;
-    width: 100%;
-    color: white;
-    background-color: #EC2027;
-    font-size: 1em;
-    font-weight: bold;
-    text-align: left;
-  }
-  
-  /* Add a grey background color on mouse-over */
-  .btn:hover {
-    background-color: hsla(0, 0%, 45%, 0.247);
-  }
-  
-  /* Add a dark background color to the active button */
-  .btn.active {
-    background-color: #EC2027;
-     color: white;
-  }
+

@@ -3,15 +3,6 @@ import Sidebar from './Sidebar';
 
 export default class Portfolio extends React.Component {
 
-// Name plug
-namePlug = (count) => {
-    console.log("namePlug")
-    var jobName = ""
-    var coutner = count
-    var nameArray = ['alexandra', 'andrew', 'anne', 'cathrine']
-    jobName = nameArray[coutner]   
-}
-
 render(){
         const jobName = "andrew"
 return(

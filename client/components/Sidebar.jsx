@@ -1,4 +1,5 @@
 import React from 'react'
+var nameArray = ['alexandra', 'andrew', 'anne', 'cathrine']
 
 export default class Sidebar extends React.Component {
 //Filter Selection    
@@ -38,30 +39,18 @@ for (i = 0; i < arr2.length; i++) {
 }
 element.className = arr1.join(" ");
 }
+
 render(){
+    console.log(nameArray)
     return (
         <>
             <div className="sidebar">
-                <button className="btn" onClick={() => this.filterSelection('all')}> Show all</button>
-                <button className="btn" onClick={() => this.filterSelection('alexandra')}> Alexandra</button>
 
-                {/* <button className="btn" onClick={() => { this.filterSelection('andrew'); this.namePlug("1");}}>Andrew x2</button> */}
+                {nameArray.map(project => <a href="#" key={project} onClick={() => { this.filterSelection(`${project}`); }}>{project}</a>)}
 
-                <button className="btn" onClick={() => this.filterSelection('andrew')}>Andrew</button>
-                <button className="btn" onClick={() => this.filterSelection('anne')}> Anne</button>
-                <button className="btn" onClick={() => this.filterSelection('cathrine')}> Cathrine</button>
-                <button className="btn" onClick={() => this.filterSelection('charles')}> Anne</button>
-                <button className="btn" onClick={() => this.filterSelection('charlotte')}> Charlotte</button>
-                <button className="btn" onClick={() => this.filterSelection('edward2')}> Edward2</button>
-                <button className="btn" onClick={() => this.filterSelection('edward3')}> Edward3</button>
-                <button className="btn" onClick={() => this.filterSelection('edward4')}> Edward4</button>
-                <button className="btn" onClick={() => this.filterSelection('ernest')}> Ernest</button>
-                <button className="btn" onClick={() => this.filterSelection('george')}> George</button>
-                <button className="btn" onClick={() => this.filterSelection('james')}> James</button>
-                <button className="btn" onClick={() => this.filterSelection('louis')}> Louis</button>
-                <button className="btn" onClick={() => this.filterSelection('mary')}> Mary</button>
-                <button className="btn" onClick={() => this.filterSelection('victoria')}> Victoria</button>
-                <button className="btn" onClick={() => this.filterSelection('william')}> William</button>
+                {/* <button className="btn" onClick={() => this.filterSelection('all')}> Show all</button>
+                <button className="btn" onClick={() => this.filterSelection('alexandra')}> Alexandra</button> */}
+
             </div>
         </>
     )
